@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title>Hope this works!</title>
+
+    <script type="text/javascript" src="pycode/pycode.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://learn.eastonsd.org/theme/styles.php/lambda/1479492997/all" />
+	<link rel="stylesheet" href="pycode/pycode.css">
+	
+</head>
+<body>
+
+
+
+
+
+Test test
+
+<div class="pycode">
+
+import turtle
+
+t = turtle.Turtle()
+
+for c in ['red', 'green', 'yellow', 'blue']:
+    t.color(c)
+    t.forward(75)
+    t.left(90)
+    
+friends = ['john', 'pat', 'gary', 'michael']
+for i, name in enumerate(friends):
+    print "iteration {iteration} is {name}".format(iteration=i, name=name)
+	
+</div>
+
+Test..
+
+
+<div class="pycode">
+
+print("Hello big old World!")
+
+testVar = raw_input("Enter some input: ")
+
+print(testVar)
+
+BOARD_SIZE = 8
+
+def under_attack(col, queens):
+    left = right = col
+
+    for r, c in reversed(queens):
+        left, right = left - 1, right + 1
+
+        if c in (left, col, right):
+            return True
+    return False
+
+def solve(n):
+    if n == 0:
+        return [[]]
+
+    smaller_solutions = solve(n - 1)
+
+    return [solution+[(n,i+1)]
+        for i in xrange(BOARD_SIZE)
+            for solution in smaller_solutions
+                if not under_attack(i+1, solution)]
+for answer in solve(BOARD_SIZE):
+    print answer
+	
+
+</div>
+
+Test..
+
+<div class="pycode">
+
+print("Hello big old World!")
+
+</div>
+
+Three lines..
+
+<div class="pycode">
+
+print("Hello big old World!")
+print("Hello big old World!")
+print("Hello big old World!")
+
+</div>
+
+</body>
+</html>
